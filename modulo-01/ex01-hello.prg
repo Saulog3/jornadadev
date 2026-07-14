@@ -1,5 +1,5 @@
-// Meu primeiro programa em Harbour
+
 FUNCTION Main()
-    QOut("Ol  Mundo!")
+    QOut("Olï¿½ Mundo!")
     QOut("Bem vindo a jornadaDEV")
 RETURN NIL
