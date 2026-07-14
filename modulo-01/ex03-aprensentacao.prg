@@ -9,12 +9,12 @@ Function Main()
     hb_cdpSelect("PT850")
     hb_langSelect("PT")
 
-    QOut("==========================")
+    QOut("============================")
     QOut("  FICHA DE APRENSENTA€ÇO  ")
-    QOut("==========================")
+    QOut("============================")
 
     QOut("Nome   : " + cNome)
     QOut("Cidade : " + cCidade)
     QOut("Curso  : " + cCurso)
-    QOut("==========================")
+    QOut("============================")
 RETURN NIL
