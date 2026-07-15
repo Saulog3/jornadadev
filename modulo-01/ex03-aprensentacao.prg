@@ -10,7 +10,7 @@ Function Main()
     hb_langSelect("PT")
 
     QOut("============================")
-    QOut("  FICHA DE APRENSENTA€ÇO  ")
+    QOut("  FICHA DE APRENSENTA€ÇO    ")
     QOut("============================")
 
     QOut("Nome   : " + cNome)
