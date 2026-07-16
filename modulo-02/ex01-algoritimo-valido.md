@@ -16,3 +16,4 @@ b. Válido! Porque há uma entrada (um número), um processamento condicional, e
 c. Invalido! Porque não há uma entrada, então o processamento não pode ser executado.
 
 d. Inválido! Porque falta especificação de entrada e de processamento.
+
