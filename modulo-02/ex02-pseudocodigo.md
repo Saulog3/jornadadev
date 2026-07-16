@@ -1,8 +1,8 @@
 inicio
 
-nBase: numerico
-nAltura: numerico
-nArea: numerico
+    nBase: numerico
+    nAltura: numerico
+    nArea: numerico
 
     leia nBase
     leia nAltura
