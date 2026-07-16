@@ -3,14 +3,14 @@ REQUEST HB_LANG_PT
 
 Function Main()
     LOCAL cNome   := "Saulo"
-    LOCAL cCidade := "Taboão da Serra"
+    LOCAL cCidade := "Tabo´┐¢o da Serra"
     LOCAL cCurso  := "Harbour/ADVPL"
         
     hb_cdpSelect("PT850")
     hb_langSelect("PT")
 
     QOut("============================")
-    QOut("  FICHA DE APRENSENTAÇÃO    ")
+    QOut("  FICHA DE APRENSENTA´┐¢´┐¢O    ")
     QOut("============================")
 
     QOut("Nome   : " + cNome)
@@ -18,3 +18,4 @@ Function Main()
     QOut("Curso  : " + cCurso)
     QOut("============================")
 RETURN NIL
+
