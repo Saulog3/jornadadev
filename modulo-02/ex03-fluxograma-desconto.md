@@ -4,10 +4,9 @@ flowchart TD
     B --> C{Valor > 100?}
     C -- Sim --> D[Aplicar desconto de 10%]
     D --> E[Calcular valor final]
-    E --> F[Mostrar valor final a pagar]
+    E --> F[Mostrar valor final]
     F --> G([Fim])
     C -- Não --> H[Sem desconto]
-    H --> I[Calcular valor final]
-    I --> J[Mostrar valor final a pagar]
+    H --> J[Mostrar valor final]
     J --> K([Fim])
 ```
