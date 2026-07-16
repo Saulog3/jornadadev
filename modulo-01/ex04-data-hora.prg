@@ -1,6 +1,6 @@
 Function Main()
     LOCAL cNome   := "Saulo"
-    LOCAL cCidade := "Tabo∆o da Serra"
+    LOCAL cCidade := "Tabo√£o da Serra"
     LOCAL cCurso  := "Harbour/ADVPL"
     LOCAL dData   := DToC(Date())
     LOCAL cHora   := Time()
@@ -8,7 +8,7 @@ Function Main()
     hb_cdpSelect("PT850")
 
     QOut("============================")
-    QOut("  FICHA DE APRENSENTAÄ«O    ")
+    QOut("  FICHA DE APRENSENTA√á√ÉO    ")
     QOut("============================")
     QOut("Nome         : " + cNome)
     QOut("Cidade       : " + cCidade)

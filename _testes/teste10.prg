@@ -13,7 +13,7 @@ FUNCTION Main()
     nB := Val( StrTran( AllTrim( cB ), ",", "." ) )
 
  
-    Qout("Soma          : " + Str( nA + nB, 10, 2 ))
+    Qout( "Soma          : " + Str( nA + nB, 10, 2 ))
     Qout( "Subtracao     : " + Str( nA - nB, 10, 2 ))
     Qout( "Multiplicacao : " + Str( nA * nB, 10, 2 ))
  
