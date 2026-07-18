@@ -20,6 +20,9 @@ FUNCTION Main()
         nMaior := nNumero1
         nMenor := nNumero2
 
+        QOut("Numero maior: ", nMaior)
+        QOut("Numero menor: ", nMenor) 
+
     ELSE
         nMaior := nNumero2
         nMenor := nNumero1
