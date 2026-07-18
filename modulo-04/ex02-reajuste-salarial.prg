@@ -1,7 +1,7 @@
-#define REAJUSTE_15 1.15
-#define REAJUSTE_12 1.12
-#define REAJUSTE_08 1.08
-#define REAJUSTE_05 1.05
+#define REAJUSTE_1 1.15
+#define REAJUSTE_2 1.12
+#define REAJUSTE_3 1.08
+#define REAJUSTE_4 1.05
 
 
 FUNCTION Main()
@@ -17,16 +17,16 @@ FUNCTION Main()
     nSalario := Val(cInput)
 
     IF nSalario <= 1000
-        nFator := REAJUSTE_15
+        nFator := REAJUSTE_1
 
     ELSEIF nSalario <= 2000
-        nFator := REAJUSTE_12
+        nFator := REAJUSTE_2
 
     ELSEIF nSalario <= 4000
-        nFator := REAJUSTE_08
+        nFator := REAJUSTE_3
 
     ELSE
-        nFator := REAJUSTE_05
+        nFator := REAJUSTE_4
 
     ENDIF
 
