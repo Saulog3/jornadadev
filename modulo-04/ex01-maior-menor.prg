@@ -15,23 +15,16 @@ FUNCTION Main()
 
     IF nNumero1 == nNumero2
         QOut("Numeros iguais")
-
-    ELSEIF nNumero1 > nNumero2
-        nMaior := nNumero1
-        nMenor := nNumero2
-
-        QOut("Numero maior: ", nMaior)
-        QOut("Numero menor: ", nMenor) 
-
     ELSE
-        nMaior := nNumero2
-        nMenor := nNumero1
-        
-        QOut("Numero maior: ", nMaior)
-        QOut("Numero menor: ", nMenor)     
+        IF nNumero1 > nNumero2
+            nMaior := nNumero1
+            nMenor := nNumero2
+        ELSE
+            nMaior := nNumero2
+            nMenor := nNumero1
+        ENDIF
 
+        QOut("Numero maior: " + AllTrim(Str(nMaior)))
+        QOut("Numero menor: " + AllTrim(Str(nMenor))) 
     ENDIF
-
-
-    
 RETURN NIL
