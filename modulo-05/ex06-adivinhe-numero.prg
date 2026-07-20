@@ -6,22 +6,34 @@ FUNCTION Main()
     LOCAL nJogada      := 0
     LOCAL nI           := 0
 
+     hb_cdpSelect("PT850")
 
-    FOR nI := 1 TO nTentativas STEP 1
-        ACCEPT "Qual o numero secreto (1 - 100): " to cInput
+
+    QOut("========================================")
+    QOut("          JOGO DA ADIVINHA├ç├âO           ")
+    QOut("========================================")
+
+    FOR nI := nTentativas TO 1 STEP -1
+
+    QOut("========================================")
+    QOut("          Voc├¬ tem ", AllTrim(Str(nI)), "Tentativas")
+    QOut("========================================")   
+    QOut("")   
+
+        ACCEPT "Qual o numero secreto (1 - 100): " TO cInput
+        QOut("") 
         nJogada := Val(cInput)
         IF nJogada == nSecreto
             QOut('Ganhou!')
             EXIT
         ELSEIF nJogada > nSecreto
-            QOut('O numero secreto e menor!')
+            QOut('O numero secreto ├® menor!')
+            QOut("") 
         ELSE
-            QOut('O numero secreto e maior!')
+            QOut('O numero secreto ├® maior!')
+            QOut("") 
         ENDIF
     NEXT
-    QOut("O numero secreto e : ", nSecreto)
-
-
-
+    QOut("O numero secreto ├® : ", AllTrim(Str(nSecreto)))
 
 RETURN NIL
