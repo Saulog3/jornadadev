@@ -8,17 +8,16 @@ FUNCTION Main()
    LOCAL nI := 0
    LOCAL aItem := {}
 
-   CLS
    QOut("==========================================")
-   QOut("        MINI-CARRINHO DE COMPRAS          ")
+   QOut("           CARRINHO DE COMPRAS            ")
    QOut("==========================================")
    QOut("")
 
-   // 1. Loop principal para adi├º├úo din├ómica de itens
+ 
    DO WHILE .T.
       QOut("--- Adicionar Produto ---")
 
-      // Valida├º├úo do Nome do Produto
+
       DO WHILE .T.
          ACCEPT "Nome do produto: " TO cNome
          cNome := AllTrim(cNome)
@@ -26,7 +25,7 @@ FUNCTION Main()
          IF Len(cNome) > 0
             EXIT
          ELSE
-            QOut("Erro: O nome do produto nao pode ficar em branco.")
+            QOut("Digite o produto")
          ENDIF
       ENDDO
 
@@ -45,12 +44,12 @@ FUNCTION Main()
          QOut("Erro: Digite um valor num├®rico maior que zero.")
       ENDDO
 
-      // Insere a estrutura {nome, preco} no carrinho
+
       AAdd(aCarrinho, { cNome, nPreco })
       QOut("-> Item adicionado com sucesso!")
       QOut("")
 
-      // Pergunta se o usu├írio deseja cadastrar mais um item
+      
       ACCEPT "Deseja adicionar outro produto? (S/N): " TO cOpcao
       cOpcao := Upper(AllTrim(cOpcao))
 
@@ -61,8 +60,6 @@ FUNCTION Main()
       QOut("")
    ENDDO
 
-   // 2. Exibi├º├úo da Lista de Itens e Totaliza├º├úo
-   CLS
    QOut("==========================================")
    QOut("            RESUMO DA COMPRA              ")
    QOut("==========================================")
@@ -70,15 +67,14 @@ FUNCTION Main()
    IF Len(aCarrinho) == 0
       QOut("O carrinho esta vazio.")
    ELSE
-      // Cabe├ºalho alinhado das colunas
+
       QOut(PadR("PRODUTO", 28) + PadL("PRECO", 12))
       QOut("------------------------------------------")
 
-      // Varredura dos itens e ac├║mulo do total
+  
       FOR nI := 1 TO Len(aCarrinho)
-         aItem := aCarrinho[nI] // Extrai {nome, preco}
+         aItem := aCarrinho[nI]
          
-         // Formata o item alinhando o nome ├á esquerda e o pre├ºo ├á direita
          QOut(PadR(aItem[1], 28) + PadL("R$ " + AllTrim(Transform(aItem[2], "999,999.99")), 12))
          
          nTotal += aItem[2] // Acumula o pre├ºo
@@ -90,5 +86,5 @@ FUNCTION Main()
 
    QOut("==========================================")
    QOut("")
-   WAIT
+ 
 RETURN NIL
