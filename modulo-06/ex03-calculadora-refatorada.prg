@@ -5,13 +5,12 @@ FUNCTION Main()
     LOCAL nNum2 := 0
     LOCAL xResultado
 
-    CLS
 
     cOpcao := MenuSelecao()
 
     IF !( cOpcao >= "1" .AND. cOpcao <= "6" )
         QOut("Opcao invalida!")
-        WAIT
+
         RETURN NIL
     ENDIF
 
@@ -22,25 +21,18 @@ FUNCTION Main()
     ENDIF
 
     xResultado := Calcular(cOpcao, nNum1, nNum2)
-
     MostrarResultado(cOpcao, nNum1, xResultado)
-
-    WAIT
 
 RETURN NIL
 
 
 FUNCTION LerNumero(cMensagem)
-
     LOCAL cValor := ""
-
     ACCEPT cMensagem TO cValor
-
 RETURN Val(cValor)
 
 
 FUNCTION Calcular(cOpcao, n1, n2)
-
     DO CASE
         CASE cOpcao == "1"
             RETURN Somar(n1, n2)
@@ -60,19 +52,15 @@ FUNCTION Calcular(cOpcao, n1, n2)
         CASE cOpcao == "6"
             RETURN Potencia(n1, n2)
     ENDCASE
-
 RETURN .F.
 
 
 FUNCTION MostrarResultado(cOpcao, nNum1, xResultado)
-
     QOut("")
-
-    IF xResultado == .F.
+    IF ValType(xResultado) == "L" .AND. !xResultado
         QOut("Erro: divisao por zero.")
         RETURN NIL
     ENDIF
-
     DO CASE
         CASE cOpcao == "1"
             QOut("Resultado da Soma: " + AllTrim(Str(xResultado)))
@@ -90,7 +78,6 @@ FUNCTION MostrarResultado(cOpcao, nNum1, xResultado)
             QOut("Raiz Quadrada de " + ;
                  AllTrim(Str(nNum1)) + ": " + ;
                  AllTrim(Str(xResultado)))
-
         CASE cOpcao == "6"
             QOut("Resultado da Potencia: " + AllTrim(Str(xResultado)))
     ENDCASE
